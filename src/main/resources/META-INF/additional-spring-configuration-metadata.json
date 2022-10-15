@@ -1,0 +1,29 @@
+{
+  "properties": [
+    {
+      "name": "log.path",
+      "type": "java.lang.String",
+      "description": "日志存储目录."
+    },
+    {
+      "name": "file.upload.path",
+      "type": "java.lang.String",
+      "description": "文件上传目录."
+    },
+    {
+      "name": "file.download.path",
+      "type": "java.lang.String",
+      "description": "文件下载目录."
+    },
+    {
+      "name": "netty.port",
+      "type": "java.lang.String",
+      "description": "netty通讯端口号."
+    },
+    {
+      "name": "server.http.port",
+      "type": "java.lang.String",
+      "description": "http端口号."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+server:
+  port: 8888 #项目访问端口号
+#  ssl:
+#    enabled: true #开启ssl配置
+#    key-store: classpath:static/ssl.jks
+#    key-store-password: Rf5*O9mpN$7LF3O#
+#    key-store-type: JKS
+
+#数据源配置
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/boot_basic?serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true&useSSL=false&characterEncoding=utf8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+  #文件上传资源路径映射
+  resources:
+    static-locations:
+      - classpath:/META-INF/resources/
+      - classpath:/resources/
+      - classpath:/static/
+      - classpath:/public/
+      - file:.${file.upload.path}
+  #文件上传大小限制 2MB
+  servlet:
+    multipart:
+      max-file-size: 2MB
+
+#日志存储目录
+log:
+  path: ./log/
+#文件存储目录
+file:
+  #文件上传目录
+  upload:
+    path: /file/upload/
+  #文件下载目录
+  download:
+    path: /file/download/
+
+#netty通讯端口
+netty:
+  port: 7453
